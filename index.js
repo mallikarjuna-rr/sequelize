@@ -1,30 +1,30 @@
 const Sequelize = require('sequelize');
 
 // Connection Check with async and await
-const sequelize = async () => {
-    const connection = new Sequelize('sequelize_node', 'root', 'Malli@123', {
-        dialect: 'mysql'
-    });
+// const sequelize = async () => {
+//     const connection = new Sequelize('sequelize_node', 'root', 'Malli@123', {
+//         dialect: 'mysql'
+//     });
 
-    try {
-        await connection.authenticate();
-        console.info("Database Connection SUCCESS")
-    }catch(err) {
-        console.error("Database Connection FAILURE",err.msg)
-    }
-};
+//     try {
+//         await connection.authenticate();
+//         console.info("Database Connection SUCCESS")
+//     }catch(err) {
+//         console.error("Database Connection FAILURE",err.msg)
+//     }
+// };
 
-sequelize();
-
-module.exports = sequelize;
+// module.exports = sequelize;
 
 // Connection Check with Promises
-// const sequelize = new Sequelize('sequelize_node', 'root', 'Malli@123', {
-//     dialect: 'mysql'
-// });
+const sequelize = new Sequelize('sequelize_node', 'root', 'Malli@123', {
+    dialect: 'mysql'
+});
 
-// sequelize.authenticate().then(() => {
-//     console.info("Database Connection SUCCESS")
-// }).catch((err) => {
-//     console.error("Database Connection FAILURE",err.msg)
-// });
+sequelize.authenticate().then(() => {
+    console.info("Database Connection SUCCESS")
+}).catch((err) => {
+    console.error("Database Connection FAILURE",err.msg)
+});
+
+module.exports = sequelize;
