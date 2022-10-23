@@ -32,4 +32,6 @@ User.sync({alter: true }).then(() => {
     console.log("Table Created")
 }).catch((err) => {
     console.log("Table not Created")
-})
+});
+
+module.exports = User;
