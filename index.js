@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 
 // Connection Check with async and await
 // const sequelize = async () => {
-//     const connection = new Sequelize('sequelize_node', 'root', 'Malli@123', {
+//     const connection = new Sequelize('sequelize_node', 'root', 'xxxx@123', {
 //         dialect: 'mysql'
 //     });
 
@@ -17,7 +17,7 @@ const Sequelize = require('sequelize');
 // module.exports = sequelize;
 
 // Connection Check with Promises
-const sequelize = new Sequelize('sequelize_node', 'root', 'xxxxxxxxx@123', {
+const sequelize = new Sequelize('sequelize_node', 'root', 'xxxx@123', {
     dialect: 'mysql'
 });
 
